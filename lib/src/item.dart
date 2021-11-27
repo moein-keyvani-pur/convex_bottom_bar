@@ -18,8 +18,12 @@ import 'package:flutter/cupertino.dart';
 
 /// Tab item used for [ConvexAppBar].
 class TabItem<T> {
-  // this code is added by moein
+  // fontFamily
   final String? fontFamily;
+  // fontSize
+  final double? fontSize;
+  // iconSize
+  final double? iconSize;
 
   /// Tab text.
   final String? title;
@@ -38,6 +42,8 @@ class TabItem<T> {
 
   /// Create item
   const TabItem({
+    this.iconSize = 5,
+    this.fontSize = 13,
     this.fontFamily,
     this.title = '',
     required this.icon,
