@@ -48,7 +48,7 @@ class FixedCircleTabStyle extends InnerBuilder {
 
     if (index == convexIndex) {
       final item = items[index];
-      double? iconSize = item.iconSize ?? 0.0;
+      // double? iconSize = item.iconSize ?? 0.0;
       return Container(
         // necessary otherwise the badge will not large enough
         width: style.layoutSize,
@@ -60,16 +60,16 @@ class FixedCircleTabStyle extends InnerBuilder {
         margin: EdgeInsets.all(margin),
         child: BlendImageIcon(
           active ? item.activeIcon ?? item.icon : item.icon,
-          size: style.activeIconSize + iconSize,
+          size: style.activeIconSize,
           color: item.blend ? backgroundColor : null,
         ),
       );
     }
 
     var noLabel = style.hideEmptyLabel && hasNoText(item);
-    var iconSize = item.iconSize ?? 0.0;
+    // var iconSize = item.iconSize ?? 0.0;
     var icon = BlendImageIcon(active ? item.activeIcon ?? item.icon : item.icon,
-        color: item.blend ? (c) : null, size: style.iconSize! + iconSize);
+        color: item.blend ? (c) : null, size: style.iconSize);
     var children = noLabel
         ? <Widget>[icon]
         : <Widget>[icon, Text(item.title ?? '', style: textStyle)];

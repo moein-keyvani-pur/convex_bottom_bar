@@ -23,7 +23,7 @@ class TabItem<T> {
   // fontSize
   final double? fontSize;
   // iconSize
-  final double? iconSize;
+  // final double? iconSize;
 
   /// Tab text.
   final String? title;
@@ -42,7 +42,7 @@ class TabItem<T> {
 
   /// Create item
   const TabItem({
-    this.iconSize = 5,
+    // this.iconSize = 5,
     this.fontSize = 13,
     this.fontFamily,
     this.title = '',
